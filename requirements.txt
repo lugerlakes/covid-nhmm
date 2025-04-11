@@ -7,3 +7,5 @@ statsmodels
 scipy
 rpy2
 pymer4
+ipykernel
+jupyterlab
