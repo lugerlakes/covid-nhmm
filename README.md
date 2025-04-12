@@ -8,28 +8,26 @@ This repository contains the complete analytical pipeline and manuscript materia
 
 ## Project Structure
 covid-nhmm-chile/ 
+
 ├── data/
-
-│ ├── raw/ # Original data (not committed) 
-
-│ └── processed/ # Preprocessed and merged data 
-
+│   ├── raw/ # Original data (not committed) 
+│   └── processed/ # Preprocessed and merged data 
+|
 ├── notebooks/ # Jupyter notebooks for each analysis stage 
-
+|
 ├── src/ # Python modules and scripts 
-
+|
 ├── results/ 
-
-│ ├── figures/ # High-quality figures for the manuscript 
-
-│ └── tables/ # Tables generated in the analysis 
-
+│    ├── figures/ # High-quality figures for the manuscript 
+|    |
+│    └── tables/ # Tables generated in the analysis 
+|
 ├── paper/ # Manuscript drafts and BibTeX references 
-
+|
 ├── setup_env.ps1 # Windows PowerShell script to create the virtual environment and install dependencies 
-
+|
 ├── requirements.txt # Python package dependencies list 
-
+|
 └── README.md
 
 ---
