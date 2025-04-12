@@ -9,16 +9,27 @@ This repository contains the complete analytical pipeline and manuscript materia
 ## Project Structure
 covid-nhmm-chile/ 
 ├── data/
+
 │ ├── raw/ # Original data (not committed) 
+
 │ └── processed/ # Preprocessed and merged data 
+
 ├── notebooks/ # Jupyter notebooks for each analysis stage 
+
 ├── src/ # Python modules and scripts 
+
 ├── results/ 
+
 │ ├── figures/ # High-quality figures for the manuscript 
+
 │ └── tables/ # Tables generated in the analysis 
+
 ├── paper/ # Manuscript drafts and BibTeX references 
+
 ├── setup_env.ps1 # Windows PowerShell script to create the virtual environment and install dependencies 
+
 ├── requirements.txt # Python package dependencies list 
+
 └── README.md
 
 ---
@@ -26,6 +37,7 @@ covid-nhmm-chile/
 ## Environment Setup
 This project requires **Python ≥ 3.11** and **R ≥ 4.5.0**.  
 **Note:** We use `rpy2` to interface with R and require that the R executable is added to your PATH.
+---
 
 ### Windows Setup (via PowerShell):
 
@@ -41,6 +53,7 @@ This project requires **Python ≥ 3.11** and **R ≥ 4.5.0**.
     .\setup_env.ps1
 ```
 This script creates a virtual environment named nhmm and installs all required dependencies from requirements.txt.
+---
 
 ### macOS/Linux Setup:
 1. **Clone the repository:**
@@ -59,6 +72,7 @@ This script creates a virtual environment named nhmm and installs all required d
 ```bash
     pip install -r requirements.txt
 ```
+---
 
 ## Software and Computational Workflow
 - Preprocessing:
@@ -75,6 +89,7 @@ This script creates a virtual environment named nhmm and installs all required d
 
 - Visualization:
     Figures are generated in Python (with matplotlib and seaborn) and network visualizations are created in Gephi with a circular layout to ensure legibility. Node colors and additional metadata (e.g., per capita income, with “CLP” prefixed to values) are assigned according to the CSV files.
+---
 
 ## Key Dependencies
 - Python:
@@ -91,6 +106,7 @@ This script creates a virtual environment named nhmm and installs all required d
     - depmixS4
     - lme4
     - glmnet (for Elastic Net regularization)
+---
 
 ## Analysis Overview
 1. Data Preprocessing:
@@ -112,11 +128,13 @@ This script creates a virtual environment named nhmm and installs all required d
 
 4. Policy Implications and Discussion:
     The modeling reveals that uniform, city-wide interventions may be ineffective unless tailored to local structural conditions. Public health policies should address underlying inequalities to improve epidemic control.
+---
 
 ## Manuscript & Reproducibility
 - The manuscript drafts (for submission to Nature) are located in the paper/ folder.
 - All scripts and notebooks generate publication-quality figures stored in the results/figures/ folder.
 - Code and datasets are versioned with Git; a comprehensive requirements.txt ensures reproducibility of the computational environment.
+---
 
 ## License & Citation
 This project is licensed under the MIT License.
@@ -124,13 +142,15 @@ This project is licensed under the MIT License.
 If you use or adapt this work, please cite:
 
 Herrera M., Neira C., Lagos F. (2025). Mobility Restrictions and Structural Inequality in the Evolution of COVID-19: A Non-Homogeneous HMM Approach Applied to Santiago, Chile. Nature (Preprint or DOI).
+---
 
 ## Contact
 For questions or further collaboration, please contact:
 
-Mauricio Herrera - mherrera@udd.cl
-Constanza Neira - cneirau@udd.cl
-Fernando Lagos – f.lagosa@udd.cl
+- Mauricio Herrera - mherrera@udd.cl
+- Constanza Neira - cneirau@udd.cl
+- Fernando Lagos – f.lagosa@udd.cl
+---
 
 ## Supplementary: Setting Up the Environment with setup_env.ps1
 The included script setup_env.ps1 automates the following on Windows:
