@@ -1,4 +1,4 @@
-# COVID-nHMM-Chile
+# COVID-nHMM
 
 This repository contains the complete analytical pipeline and manuscript materials for the study:
 
@@ -9,7 +9,7 @@ This repository contains the complete analytical pipeline and manuscript materia
 ## Project Structure
 
 ```
-COVID-nHMM-Chile/
+COVID-nHMM/
 ├── data/
 │   ├── raw/                    # Original data (not committed)
 │   └── processed/              # Preprocessed and merged data
