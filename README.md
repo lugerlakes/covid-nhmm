@@ -10,11 +10,10 @@ This repository contains the complete analytical pipeline and manuscript materia
 
 ```
 COVID-nHMM/
-├── data/
-│   ├── raw/                    # Original data (not committed)
-│   └── processed/              # Preprocessed and merged data
+├── data/                      # Raw and processed data files
 ├── notebooks/                 # Jupyter notebooks for each analysis stage
 ├── src/                       # Python modules and scripts
+│   └── install_packages.R # R script to install required R packages
 ├── results/
 │   ├── figures/               # High-quality figures for the manuscript
 │   └── tables/                # Tables generated in the analysis
@@ -27,7 +26,8 @@ COVID-nHMM/
 ## Environment Setup
 This project requires **Python ≥ 3.11** and **R ≥ 4.5.0**.  
 
-**Note:** We use `rpy2` to interface with R and require that the R executable is added to your PATH.
+> **Note:** We use `rpy2` to interface with R. Ensure that the R executable is available in your `PATH` environment variable. You can verify with `R --version` in a new terminal session.
+
 ---
 
 ### Windows Setup (via PowerShell):
@@ -35,8 +35,8 @@ This project requires **Python ≥ 3.11** and **R ≥ 4.5.0**.
 1. **Clone the repository:**
 
 ```bash
-   git clone https://github.com/your-user/covid-nhmm-chile.git
-   cd covid-nhmm-chile
+   git clone https://github.com/your-user/covid-nhmm.git
+   cd covid-nhmm
 ```
 2. Run the setup script:
 
@@ -49,8 +49,8 @@ This script creates a virtual environment named nhmm and installs all required d
 ### macOS/Linux Setup:
 1. **Clone the repository:**
  ```bash
-    git clone https://github.com/your-user/covid-nhmm-chile.git
-    cd covid-nhmm-chile
+    git clone https://github.com/your-user/covid-nhmm.git
+    cd covid-nhmm
 ```
 2. Create and activate the virtual environment:
 
@@ -122,9 +122,14 @@ This script creates a virtual environment named nhmm and installs all required d
 ---
 
 ## Manuscript & Reproducibility
+
 - The manuscript drafts (for submission to Nature) are located in the paper/ folder.
-- All scripts and notebooks generate publication-quality figures stored in the results/figures/ folder.
-- Code and datasets are versioned with Git; a comprehensive requirements.txt ensures reproducibility of the computational environment.
+
+- Figures and tables for publication are generated in results/
+
+- Environments are controlled via requirements.txt and setup_env.ps1
+
+- R package dependencies are listed in src/install_packages.R
 ---
 
 ## License & Citation
@@ -132,7 +137,7 @@ This project is licensed under the MIT License.
 
 If you use or adapt this work, please cite:
 
-Herrera M., Neira C., Lagos F. (2025). Mobility Restrictions and Structural Inequality in the Evolution of COVID-19: A Non-Homogeneous HMM Approach Applied to Santiago, Chile. Nature (Preprint or DOI).
+Herrera M., Neira C., Lagos F. (2025). *Mobility Restrictions and Structural Inequality in the Evolution of COVID-19: A Non-Homogeneous HMM Approach Applied to Santiago, Chile. Nature.*
 ---
 
 ## Contact
@@ -143,7 +148,9 @@ For questions or further collaboration, please contact:
 - Fernando Lagos – f.lagosa@udd.cl
 ---
 
-## Supplementary: Setting Up the Environment with setup_env.ps1
+## Supplementary: 
+
+### Setting Up the Environment with setup_env.ps1
 The included script setup_env.ps1 automates the following on Windows:
 
 - Creation of the virtual environment (nhmm)
@@ -151,3 +158,18 @@ The included script setup_env.ps1 automates the following on Windows:
 - Configuration to ensure R (version 4.5.0 or later) is available in your PATH
 
 Simply run it in PowerShell within the project root directory.
+
+###  install_packages.R
+For convenience, you can install R packages via:
+```R
+source("src/install_packages.R")
+```
+Ensure that:
+
+You’re in the project root or have set the working directory with setwd()
+
+R ≥ 4.5.0 is installed and in your system PATH
+
+```R
+install.packages(c("depmixS4", "lme4", "glmnet"))
+```
