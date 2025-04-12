@@ -11,6 +11,7 @@ This repository contains the complete analytical pipeline and manuscript materia
 ```
 COVID-nHMM/
 ├── data/                      # Raw and processed data files
+|   └── covid_data             
 ├── notebooks/                 # Jupyter notebooks for each analysis stage
 ├── src/                       # Python modules and scripts
 │   └── install_packages.R # R script to install required R packages
