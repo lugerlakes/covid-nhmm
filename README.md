@@ -7,33 +7,31 @@ This repository contains the complete analytical pipeline and manuscript materia
 ---
 
 ## Project Structure
-covid-nhmm-chile/ 
 
+```
+covid-nhmm-chile/
 ├── data/
-│   ├── raw/ # Original data (not committed) 
-│   └── processed/ # Preprocessed and merged data 
-|
-├── notebooks/ # Jupyter notebooks for each analysis stage 
-|
-├── src/ # Python modules and scripts 
-|
-├── results/ 
-│    ├── figures/ # High-quality figures for the manuscript 
-|    |
-│    └── tables/ # Tables generated in the analysis 
-|
-├── paper/ # Manuscript drafts and BibTeX references 
-|
-├── setup_env.ps1 # Windows PowerShell script to create the virtual environment and install dependencies 
-|
-├── requirements.txt # Python package dependencies list 
-|
+│   ├── raw/                    # Original data (not committed)
+│   └── processed/              # Preprocessed and merged data
+│
+├── notebooks/                 # Jupyter notebooks for each analysis stage
+│
+├── src/                       # Python modules and scripts
+│
+├── results/
+│   ├── figures/               # High-quality figures for the manuscript
+│   └── tables/                # Tables generated in the analysis
+│
+├── paper/                     # Manuscript drafts and BibTeX references
+│
+├── setup_env.ps1              # PowerShell script to create environment and install dependencies
+├── requirements.txt           # Python package dependencies
 └── README.md
-
----
+```
 
 ## Environment Setup
 This project requires **Python ≥ 3.11** and **R ≥ 4.5.0**.  
+
 **Note:** We use `rpy2` to interface with R and require that the R executable is added to your PATH.
 ---
 
@@ -156,4 +154,5 @@ The included script setup_env.ps1 automates the following on Windows:
 - Creation of the virtual environment (nhmm)
 - Installation of Python dependencies from requirements.txt
 - Configuration to ensure R (version 4.5.0 or later) is available in your PATH
+
 Simply run it in PowerShell within the project root directory.
