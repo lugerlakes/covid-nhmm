@@ -128,8 +128,8 @@ Herrera M., Neira C., Lagos F. (2025). Mobility Restrictions and Structural Ineq
 ## Contact
 For questions or further collaboration, please contact:
 
-Mauricio Herrera - m.herrera@udd.cl
-Constanza Neira - c.neirau@udd.cl
+Mauricio Herrera - mherrera@udd.cl
+Constanza Neira - cneirau@udd.cl
 Fernando Lagos – f.lagosa@udd.cl
 
 ## Supplementary: Setting Up the Environment with setup_env.ps1
