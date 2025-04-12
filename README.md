@@ -9,7 +9,7 @@ This repository contains the complete analytical pipeline and manuscript materia
 ## Project Structure
 
 ```
-covid-nhmm-chile/
+COVID-nHMM-Chile/
 ├── data/
 │   ├── raw/                    # Original data (not committed)
 │   └── processed/              # Preprocessed and merged data
