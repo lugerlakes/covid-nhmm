@@ -9,3 +9,5 @@ rpy2
 pymer4
 ipykernel
 jupyterlab
+openpyxl
+cmocean

@@ -23,7 +23,7 @@ COVID-nHMM/
 ├── requirements.txt           # Python package dependencies
 └── README.md
 ```
-Cambio
+
 ## Environment Setup
 This project requires **Python ≥ 3.11** and **R ≥ 4.5.0**.  
 
