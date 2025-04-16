@@ -77,10 +77,10 @@ This script creates a virtual environment named nhmm and installs all required d
     The most probable sequence of hidden states (State 1: Controlled Transmission, State 2: Accelerated Transmission, State 3: Critical Transmission) is obtained using the Viterbi algorithm.
 
 - Transition Modeling with Linear Mixed Models (LMMs):
-    Using lme4 in R, we model the probability of transition between states as a function of mobility and sociodemographic covariates. Random effects for communes and dates account for spatiotemporal heterogeneity. Covariate selection is guided via Elastic Net regression (using glmnet).
+    Using lme4 in R, we model the transition probability between states as a function of mobility and sociodemographic covariates. Random effects for communes and dates account for spatiotemporal heterogeneity. Covariate selection is guided via Elastic Net regression (using glmnet).
 
 - Visualization:
-    Figures are generated in Python (with matplotlib and seaborn) and network visualizations are created in Gephi with a circular layout to ensure legibility. Node colors and additional metadata (e.g., per capita income, with “CLP” prefixed to values) are assigned according to the CSV files.
+    Figures are generated in Python (with matplotlib and seaborn), and network visualizations are created in Gephi with a circular layout to ensure legibility. Node colors and additional metadata (e.g., per capita income, with “CLP” prefixed to values) are assigned according to the CSV files.
 ---
 
 ## Key Dependencies
@@ -124,9 +124,9 @@ This script creates a virtual environment named nhmm and installs all required d
 
 ## Manuscript & Reproducibility
 
-- The manuscript drafts (for submission to Nature) are located in the paper/ folder.
+- The manuscript drafts (for submission to Nature) are in the paper/ folder.
 
-- Figures and tables for publication are generated in results/
+- Figures and tables for publication are generated in the results/
 
 - Environments are controlled via requirements.txt and setup_env.ps1
 
@@ -138,7 +138,7 @@ This project is licensed under the MIT License.
 
 If you use or adapt this work, please cite:
 
-Herrera M., Neira C., Lagos F. (2025). *Mobility Restrictions and Structural Inequality in the Evolution of COVID-19: A Non-Homogeneous HMM Approach Applied to Santiago, Chile. Nature.*
+Herrera M., Neira C., Lagos F. (2025). *Mobility Restrictions and Structural Inequality in the Evolution of COVID-19: A Non-Homogeneous HMM Approach Applied to Santiago, Chile.*
 ---
 
 ## Contact
