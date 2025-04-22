@@ -107,9 +107,9 @@ This script creates a virtual environment named nhmm and installs all required d
 2. Modeling COVID-19 Dynamics:
     A non-homogeneous Hidden Markov Model was fitted to capture epidemic phases across communes:
 
-    - State 1 — Controlled Transmission: ~5.2 daily cases/10,000 inhabitants; highest mobility (internal: ~4.2; external: ~6.0); dominant in affluent communes.
+    - State 1 — Moderated Transmission: ~5.2 daily cases/10,000 inhabitants; highest mobility (internal: ~4.2; external: ~6.0); dominant in affluent communes.
 
-    - State 2 — Accelerated Transmission: ~15.4 daily cases; moderate decline in mobility (internal: ~3.2; external: ~5.3); associated with increasing overcrowding and lower education.
+    - State 2 — Several Transmission: ~15.4 daily cases; moderate decline in mobility (internal: ~3.2; external: ~5.3); associated with increasing overcrowding and lower education.
 
     - State 3 — Critical Transmission: ~55.4 daily cases; lowest mobility (internal: ~2.6; external: ~4.7); prevalent in structurally vulnerable communes.
 
