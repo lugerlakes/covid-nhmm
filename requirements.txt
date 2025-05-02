@@ -11,3 +11,4 @@ ipykernel
 jupyterlab
 openpyxl
 cmocean
+pomegranate
