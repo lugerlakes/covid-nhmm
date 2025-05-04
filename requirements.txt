@@ -12,3 +12,4 @@ jupyterlab
 openpyxl
 cmocean
 pomegranate
+geopandas
