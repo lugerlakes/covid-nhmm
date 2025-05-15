@@ -2,11 +2,26 @@
 
 This repository contains the complete analytical pipeline and manuscript materials for the study:
 
-> **"Mobility Restrictions and Structural Inequality in the Evolution of COVID-19: A Non-Homogeneous Hidden Markov Model Approach Applied to Santiago, Chile."**
+> **"Beyond Mobility: Socioeconomic Context Shapes the Dynamics and Hidden States of COVID-19 Transmission"**
 
 ---
+## Project Overview
 
-## Project Structure
+This repository contains the code, data, and analytical materials for the study Beyond Mobility: Socioeconomic Context Shapes the Dynamics and Hidden States of COVID-19 Transmission. Our integrative framework models the spatiotemporal progression of COVID-19 in urban communes, emphasizing the role of mobility patterns and structural socioeconomic factors.
+
+## Methodology
+
+The project employs **Non-Homogeneous Hidden Markov Models (nHMMs)** to identify latent epidemic states driven by internal and external mobility patterns and modulated by sociodemographic and structural covariates.
+
+Using **linear mixed-effects models**, we analyze the heterogeneity in transition dynamics, demonstrating how urban quality and structural inequality shape epidemic persistence and regression.
+
+To validate the inferred latent structures, we implement two simulation strategies:
+- **Hybrid Copula–Generalized Pareto Distribution Model** to capture non-Gaussian dependency and tail risks.
+- **Conditional Variational Autoencoder with LSTM (CVAE-LSTM)**, conditioned on latent states and commune-specific features.
+We also introduce **severity-weighted data augmentation** to enhance the representation of critical epidemic regimes, improving the reproduction of epidemic peaks.
+
+
+## Repository Structure
 
 ```
 COVID-nHMM/
@@ -100,26 +115,34 @@ This script creates a virtual environment named nhmm and installs all required d
     - glmnet (for Elastic Net regularization)
 ---
 
-## Analysis Overview
+## Modeling and Analysis    
 1. Data Preprocessing:
     Epidemiological data (daily and cumulative COVID-19 cases), mobility indices (internal and external), and sociodemographic variables (per capita income, household size, education level, housing conditions, Social Priority Index) were obtained from official records, anonymized cellphone logs, and government sources.
 
-2. Modeling COVID-19 Dynamics:
-    A non-homogeneous Hidden Markov Model was fitted to capture epidemic phases across communes:
+    - Seven-day moving average applied to epidemiological time series.
+    - Commune-level data fusion based on standardized keys.
 
-    - State 1 — Moderated Transmission: ~5.2 daily cases/10,000 inhabitants; highest mobility (internal: ~4.2; external: ~6.0); dominant in affluent communes.
+2. nHMM Model:
+    - Estimation of latent epidemic states using depmixS4 in R.
+    - Transition probabilities modeled as functions of mobility and inequality indicators.
+    - Model comparison across 3–10 states using AIC, BIC, and likelihood estimation.
 
-    - State 2 — Several Transmission: ~15.4 daily cases; moderate decline in mobility (internal: ~3.2; external: ~5.3); associated with increasing overcrowding and lower education.
+3. Viterbi Decoding:
+    - Identifying the most probable sequence of epidemic states:
+        - State 1 — Moderated Transmission.
+        - State 2 — Several Transmission.
+        - State 3 — Critical Transmission.
 
-    - State 3 — Critical Transmission: ~55.4 daily cases; lowest mobility (internal: ~2.6; external: ~4.7); prevalent in structurally vulnerable communes.
+4. Simulation Strategies:
+    - Non-Gaussian dependency modeling using Copulas.
+    - Deep learning-based epidemic simulation using CVAE-LSTM.
 
-    A clear gradient of socioeconomic inequality was observed: per capita income decreases (e.g., CLP 820,000 for Vitacura vs. CLP 320,000 for La Pintana), and housing overcrowding and deprivation increase from State 1 to State 3.
+5. Key Contributions
+    - Identification of latent transmission states beyond mobility-based models.
+    - Empirical evidence highlighting structural inequalities in epidemic dynamics.
+    - Advanced simulation techniques to enhance epidemic model fidelity.
+    - Generalizable framework for infectious disease forecasting and policy design.
 
-3. Transition Probabilities & Visualization:
-    State transitions (including self-loops for state maintenance) and emission probabilities were extracted to build network visualizations. Comparative network graphs for representative communes (e.g., Vitacura vs. La Pintana) showcase how transitions change with mobility; for instance, nodes are colored accordingly (green for State 1, yellow for State 2, and red for State 3) and annotated with key metrics.
-
-4. Policy Implications and Discussion:
-    The modeling reveals that uniform, city-wide interventions may be ineffective unless tailored to local structural conditions. Public health policies should address underlying inequalities to improve epidemic control.
 ---
 
 ## Manuscript & Reproducibility
@@ -131,6 +154,14 @@ This script creates a virtual environment named nhmm and installs all required d
 - Environments are controlled via requirements.txt and setup_env.ps1
 
 - R package dependencies are listed in src/install_packages.R
+
+---
+
+## Authors
+- Mauricio Herrera-Marín (mherrera@udd.cl) – Faculty of Engineering, Universidad del Desarrollo, Santiago, Chile.
+- Constanza Neira-Urrutia (c.neira@udd.cl) – Faculty of Health Sciences, Universidad del Desarrollo, Concepción, Chile.
+- Fernando Lagos-Alvarado (f.lagosa@udd.cl) – Faculty of Engineering, Universidad del Desarrollo, Santiago, Chile.
+
 ---
 
 ## License & Citation
