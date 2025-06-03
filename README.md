@@ -158,10 +158,11 @@ This script creates a virtual environment named nhmm and installs all required d
 ---
 
 ## Authors
-- Mauricio Herrera-Marín (mherrera@udd.cl) – Faculty of Engineering, Universidad del Desarrollo, Santiago, Chile.
-- Constanza Neira-Urrutia (c.neira@udd.cl) – Faculty of Health Sciences, Universidad del Desarrollo, Concepción, Chile.
-- Fernando Lagos-Alvarado (f.lagosa@udd.cl) – Faculty of Engineering, Universidad del Desarrollo, Santiago, Chile.
-
+- Mauricio Herrera-Marín (mherrera@udd.cl) * + – Faculty of Engineering, Universidad del Desarrollo, Santiago, Chile.
+- Constanza Neira-Urrutia (c.neira@udd.cl) + – Faculty of Health Sciences, Universidad del Desarrollo, Concepción, Chile.
+- Fernando Lagos-Alvarado (f.lagosa@udd.cl) + – Faculty of Engineering, Universidad del Desarrollo, Santiago, Chile.
+- * Corresponding author.
+- + These authors contributed equally to this work.
 ---
 
 ## License & Citation
@@ -169,15 +170,15 @@ This project is licensed under the MIT License.
 
 If you use or adapt this work, please cite:
 
-Herrera M., Neira C., Lagos F. (2025). *Mobility Restrictions and Structural Inequality in the Evolution of COVID-19: A Non-Homogeneous HMM Approach Applied to Santiago, Chile.*
+Mauricio Herrera-Marín, Constanza Neira-Urrutia, and Fernando Lagos-Alvarado (2025). *Beyond Mobility: Socioeconomic Context Shapes the Dynamics and Hidden States of COVID-19 Transmission*
 ---
 
 ## Contact
 For questions or further collaboration, please contact:
 
-- Mauricio Herrera - mherrera@udd.cl
-- Constanza Neira - cneirau@udd.cl
-- Fernando Lagos – f.lagosa@udd.cl
+- Mauricio Herrera-Marín -  mherrera@udd.cl
+- Constanza Neira-Urrutia - c.neirau@udd.cl
+- Fernando Lagos-Alvarado – f.lagosa@udd.cl
 ---
 
 ## Supplementary: 
@@ -202,6 +203,3 @@ You’re in the project root or have set the working directory with setwd()
 
 R ≥ 4.5.0 is installed and in your system PATH
 
-```R
-install.packages(c("depmixS4", "lme4", "glmnet"))
-```
