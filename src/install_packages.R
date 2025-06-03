@@ -1,9 +1,13 @@
 # install_packages.R
 # Script to install required R packages for COVID-nHMM-Chile project
 
-required_packages <- c("depmixS4", "lme4", "glmnet", "ggplot2", "data.table", "localconverter",
-                       "httpgd", "base", "utils", "hrbrthemes", "dplyr", "tidyr", "ggthemes", 
-                       "ggpubr", "ggsci", "viridis", "sf", "MuMIn", "showtext", "extrafont")  # Agregado showtext y extrafont
+required_packages <- c(
+  "depmixS4", "lme4", "glmnet", "ggplot2", "data.table", "localconverter",
+  "httpgd", "base", "utils", "hrbrthemes", "dplyr", "tidyr", "ggthemes", 
+  "ggpubr", "ggsci", "viridis", "sf", "MuMIn", "showtext", "extrafont",
+  "copula", "fitdistrplus", "evd", "readr", "pacman",
+  "cowplot", "scales", "gridExtra", "ggrepel"  # Nuevos paquetes añadidos
+)
 
 # Set CRAN mirror (cloud-based, stable)
 options(repos = c(CRAN = "https://cloud.r-project.org"))
