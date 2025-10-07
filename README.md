@@ -84,7 +84,7 @@ COVID-nHMM/
 ```bash
     .\setup_env.ps1
 ```
-This script creates a virtual environment named nhmm and installs all required dependencies from requirements.txt.
+   This script creates a virtual environment named nhmm and installs all required dependencies from requirements.txt.
 ---
 
 ### macOS/Linux Setup:
