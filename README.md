@@ -56,7 +56,7 @@ COVID-nHMM/
 ├── results/
 │   ├── figures/               # High-quality figures for publication
 │   └── tables/                # Derived statistical tables
-├── supplementary/             # Supplementary drafts and BibTeX references
+├── supplementary/             # Supplementary drafts
 ├── setup_env.ps1              # PowerShell script for environment setup
 ├── requirements.txt           # Python dependencies
 └── README.md
@@ -81,7 +81,7 @@ COVID-nHMM/
 ```
 2. Run the setup script:
 
-```powershell
+```bash
     .\setup_env.ps1
 ```
 This script creates a virtual environment named nhmm and installs all required dependencies from requirements.txt.
@@ -118,11 +118,8 @@ This script creates a virtual environment named nhmm and installs all required d
 ## Manuscript & Reproducibility
 
 - All analyses use open data aggregated at the commune level (no personal identifiers).
-
 - Figures and tables for publication are generated in the results/
-
 - Environments are controlled via requirements.txt and setup_env.ps1
-
 - R package dependencies are listed in src/install_packages.R
 
 ---
@@ -183,4 +180,3 @@ R ≥ 4.5.0 is installed and in your system PATH
 
 > Herrera-Marín, M., Neira-Urrutia, C., & Lagos-Alvarado, F. (2025).  
 > *Inference of latent epidemic regimes and generative simulations reveal how inequality and mobility shape COVID-19 transmission.*  
-> *Scientific Reports (Nature Portfolio).*
